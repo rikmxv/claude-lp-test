@@ -3,55 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cloud Caféは東京・渋谷にあるカフェです。厳選されたコーヒーと手作りスイーツで、雲の上のような特別なひとときをご提供します。">
+    <meta property="og:title" content="Cloud Café - 雲の上のようなくつろぎを">
+    <meta property="og:description" content="最高のコーヒーとスイーツで、特別なひとときをお過ごしください">
+    <meta property="og:type" content="website">
     <title>Cloud Café - 雲の上のようなくつろぎを</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- スキップリンク（アクセシビリティ対応） -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+
     <header>
         <h1>Cloud Café</h1>
-        <nav>
-            <ul>
+        <nav aria-label="メインナビゲーション">
+            <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
                 <li><a href="#menu">メニュー</a></li>
                 <li><a href="#about">お店について</a></li>
                 <li><a href="#access">アクセス</a></li>
+                <li><a href="#contact" class="nav-cta">ご予約</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero">
-            <h2>雲の上のようなくつろぎを</h2>
-            <p>最高のコーヒーとスイーツで、特別なひとときをお過ごしください</p>
+            <div class="hero-content">
+                <h2>雲の上のようなくつろぎを</h2>
+                <p>最高のコーヒーとスイーツで、特別なひとときをお過ごしください</p>
+                <a href="#contact" class="btn btn-primary">ご予約・お問い合わせ</a>
+            </div>
         </section>
 
-        <section id="menu">
+        <section id="menu" class="section-alt">
             <h2>メニュー</h2>
             <div class="menu-items">
                 <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Blend+Coffee" alt="ブレンドコーヒー" width="300" height="200">
                     <h3>ブレンドコーヒー</h3>
-                    <p>¥500</p>
+                    <p class="description">厳選された豆をバランスよくブレンド</p>
+                    <p class="price"><span class="visually-hidden">価格:</span>¥500</p>
                 </div>
                 <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Cafe+Latte" alt="カフェラテ" width="300" height="200">
                     <h3>カフェラテ</h3>
-                    <p>¥600</p>
+                    <p class="description">まろやかなミルクとエスプレッソの調和</p>
+                    <p class="price"><span class="visually-hidden">価格:</span>¥600</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Cheesecake" alt="チーズケーキ" width="300" height="200">
+                    <h3>チーズケーキ</h3>
+                    <p class="description">濃厚でなめらかな自家製ケーキ</p>
+                    <p class="price"><span class="visually-hidden">価格:</span>¥650</p>
                 </div>
             </div>
         </section>
 
         <section id="about">
             <h2>お店について</h2>
-            <p>Cloud Caféは2024年にオープンした、心地よい空間でくつろげるカフェです。</p>
+            <div class="about-content">
+                <p>Cloud Caféは2024年にオープンした、心地よい空間でくつろげるカフェです。</p>
+                <p>厳選された高品質なコーヒー豆を使用し、一杯一杯丁寧に淹れています。落ち着いた雰囲気の店内で、ゆったりとした時間をお過ごしください。</p>
+            </div>
         </section>
 
-        <section id="access">
+        <section id="access" class="section-alt">
             <h2>アクセス</h2>
-            <p>東京都渋谷区○○1-2-3</p>
-            <p>営業時間: 9:00-20:00</p>
+            <div class="access-content">
+                <div class="access-info">
+                    <h3>店舗情報</h3>
+                    <p><strong>住所:</strong> 東京都渋谷区○○1-2-3</p>
+                    <p><strong>電話:</strong> 03-XXXX-XXXX</p>
+                    <p><strong>営業時間:</strong> 9:00-20:00</p>
+                    <p><strong>定休日:</strong> 火曜日</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>ご予約・お問い合わせ</h2>
+            <p>お席のご予約やお問い合わせは、お電話またはメールでお気軽にどうぞ。</p>
+            <div class="contact-buttons">
+                <a href="tel:03-XXXX-XXXX" class="btn btn-secondary" aria-label="電話で予約する: 03-XXXX-XXXX">電話で予約</a>
+                <a href="mailto:info@cloudcafe.example.com" class="btn btn-secondary">メールで問い合わせ</a>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Cloud Café. All rights reserved.</p>
     </footer>
+
+    <!-- 構造化データ（SEO対策） -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "Cloud Café",
+        "description": "雲の上のようなくつろぎを提供するカフェ",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "○○1-2-3",
+            "addressLocality": "渋谷区",
+            "addressRegion": "東京都",
+            "addressCountry": "JP"
+        },
+        "telephone": "+81-3-XXXX-XXXX",
+        "openingHours": "Mo,We-Su 09:00-20:00",
+        "priceRange": "¥500-¥1000"
+    }
+    </script>
+
+    <!-- JavaScriptファイルの読み込み -->
+    <script src="script.js"></script>
 </body>
 </html>
